@@ -55,7 +55,7 @@ public class EmployeeDataRepository {
 	private String getFilePath(String fileName) {
 		LocalDateTime now = LocalDateTime.now();
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-		String suffix = fileName+"-"+now.format(formatter);
+		String suffix = fileName+"-"+now.format(formatter)+".txt";
 		return String.format(SAVE_PATH, suffix);
 	}
 
